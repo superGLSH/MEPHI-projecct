@@ -8,7 +8,7 @@ with open(f"inputfile/{inpf}", mode="rb") as file:
     data = list(
         map(lambda x: list("0" * (8 - len(bin(x).replace("0b", "", 1))) + bin(x).replace("0b", "", 1)),
             list(file.read())))
-mode = input("Хотите кодировать (1) или декодировать (2): ")
+mode = input("Хотите кодировать (1) или декодировать (2) или сломать (3): ")
 
 if mode == "1":
     percent = int(input("Введите процент ошибок: "))
